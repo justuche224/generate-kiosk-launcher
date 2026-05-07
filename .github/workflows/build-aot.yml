@@ -24,7 +24,7 @@ jobs:
       - name: Build Installer with Inno Setup
         # This uses the pre-installed Inno Setup compiler on the GitHub runner
         run: |
-          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
 
       - name: Upload Setup EXE
         uses: actions/upload-artifact@v4
