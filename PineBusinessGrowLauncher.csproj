@@ -7,6 +7,12 @@
     <OptimizationPreference>Size</OptimizationPreference>
     <ApplicationIcon>pine-logo.ico</ApplicationIcon>
     <StackTraceSupport>false</StackTraceSupport>
+    <AssemblyName>Pine POS Launcher</AssemblyName>
+    <Company>Pine Business Grow</Company>
+    <Product>Pine POS Launcher</Product>
+    <Description>Pine POS kiosk launcher</Description>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
