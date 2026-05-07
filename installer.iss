@@ -3,7 +3,7 @@ AppName=Pine POS
 AppVersion=1.0
 DefaultDirName={autopf}\Pine POS
 DefaultGroupName=Pine Business
-UninstallDisplayIcon={app}\PineBusinessGrowLauncher.exe
+UninstallDisplayIcon={app}\Pine POS Launcher.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=.\Output
@@ -13,14 +13,14 @@ SetupIconFile=pine-logo.ico
 
 [Files]
 ; This grabs the compiled AOT exe and puts it in the installation folder
-Source: "dist\PineBusinessGrowLauncher.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\Pine POS Launcher.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 ; Creates the Start Menu shortcut
-Name: "{group}\Pine POS"; Filename: "{app}\PineBusinessGrowLauncher.exe"
+Name: "{group}\Pine POS"; Filename: "{app}\Pine POS Launcher.exe"
 ; Creates the Desktop shortcut
-Name: "{autodesktop}\Pine POS"; Filename: "{app}\PineBusinessGrowLauncher.exe"
+Name: "{autodesktop}\Pine POS"; Filename: "{app}\Pine POS Launcher.exe"
 
 [Run]
 ; Offers to launch the POS immediately after installation finishes
-Filename: "{app}\PineBusinessGrowLauncher.exe"; Description: "Launch Pine POS now"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\Pine POS Launcher.exe"; Description: "Launch Pine POS now"; Flags: nowait postinstall skipifsilent
