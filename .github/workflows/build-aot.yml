@@ -1,0 +1,29 @@
+name: Build Native AOT Launcher
+
+on:
+  push:
+    branches: [ main ]  # Runs on every push to main
+  workflow_dispatch:    # Allows it to be ran manually from the UI
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Publish Win-x64
+        # This command triggers the AOT compilation using the Windows runner's built-in C++ tools
+        run: dotnet publish -r win-x64 -c Release -o ./dist
+
+      - name: Upload Finished EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pine-POS-Launcher
+          path: ./dist/*.exe

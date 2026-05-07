@@ -1,0 +1,47 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+# NuGet v3's project.json files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider
+.idea/
+*.sln.iml
+
+# OS generated
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# JetBrains
+*.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Backup/Temporary files
+*_i.c
+*_p.c
+*_h.h
+*.orig
+*.tmp
+*.temp

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <PublishAot>true</PublishAot> <!-- The Magic Flag -->
+    <OptimizationPreference>Size</OptimizationPreference>
+    <ApplicationIcon>pine-logo.ico</ApplicationIcon>
+    <StackTraceSupport>false</StackTraceSupport>
+  </PropertyGroup>
+
+</Project>
