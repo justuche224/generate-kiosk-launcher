@@ -1,9 +1,9 @@
-name: Build Native AOT Launcher
+name: Build Native AOT Launcher and Installer
 
 on:
   push:
-    branches: [ main ]  # Runs on every push to main
-  workflow_dispatch:    # Allows it to be ran manually from the UI
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -19,11 +19,16 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Publish Win-x64
-        # This command triggers the AOT compilation using the Windows runner's built-in C++ tools
         run: dotnet publish -r win-x64 -c Release -o ./dist
 
-      - name: Upload Finished EXE
+      - name: Build Installer with Inno Setup
+        # This uses the pre-installed Inno Setup compiler on the GitHub runner
+        run: |
+          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+
+      - name: Upload Setup EXE
         uses: actions/upload-artifact@v4
         with:
-          name: Pine-POS-Launcher
-          path: ./dist/*.exe
+          name: Pine-POS-Installer
+          # The .iss script saves the final installer in the Output folder
+          path: ./Output/PinePOSSetup.exe
